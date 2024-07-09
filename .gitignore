@@ -3,3 +3,7 @@
 .out
 .o
 .cache
+CMakeFiles
+CMakeCache.txt
+MakeFile
+cmake_install.cmake
