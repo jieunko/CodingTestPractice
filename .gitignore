@@ -1,9 +1,10 @@
-.cmake
-.bin
-.out
-.o
-.cache
+*.cmake
+*.bin
+*.out
+*.o
+*.cache
 CMakeFiles
 CMakeCache.txt
 MakeFile
 cmake_install.cmake
+BaekJoon
