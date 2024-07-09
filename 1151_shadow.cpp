@@ -59,6 +59,11 @@ double calculateShadowArea(const Point3D& p1, const Point3D& p2, const Point3D& 
     return area;
 }
 
+Vector3D calculateSquareNormal(const vector<int>& square, const Vector3D& pointlist) 
+{
+    
+}
+
 int main() {
     Point3D p1, p2, light;
     
@@ -78,14 +83,19 @@ int main() {
         
     };
     std::sort(hexa, hexa+6, cmp);
-    for(auto i : hexa)
-    {
-        cout << i.x <<" " << i.y << " " << i.z << endl;
-    }
+    vector<vector<int>> index = {
+        {1,5,6,2},
+        {5,7,8,6},
+        {7,3,4,8},
+        {1,3,4,2},
+        {2,6,8,4},
+        {5,1,3,6}
+    };
+  
     
     double shadowArea = calculateShadowArea(p1, p2, light);
     
-    cout << shadowArea << endl;
+    std::cout << shadowArea << endl;
     
     return 0;
 }
