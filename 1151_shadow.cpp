@@ -59,10 +59,15 @@ double calculateShadowArea(const Point3D& p1, const Point3D& p2, const Point3D& 
     return area;
 }
 
-Vector3D calculateSquareNormal(const vector<int>& square, const Vector3D& pointlist) 
+Vector3D calculateSquareNormal(const vector<int>& square, const Vector3D* pointlist) 
 {
+    Vector3D p1( pointlist[square[1]]- pointlist[square[0]]);
+    Vector3D p2( pointlist[square[3]]- pointlist[square[0]]);
     
-}
+    Vector3D normal = p1.cross(p2);
+    return normal;
+} 
+
 
 int main() {
     Point3D p1, p2, light;
